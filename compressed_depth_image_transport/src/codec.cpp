@@ -326,8 +326,8 @@ sensor_msgs::CompressedImage::Ptr encodeCompressedDepthImage(
   if (compressedImage.size() > 0)
   {
     // Add configuration to binary output
-    compressed->data.resize(sizeof(ConfigHeader));
-    memcpy(&compressed->data[0], &compressionConfig, sizeof(ConfigHeader));
+    // compressed->data.resize(sizeof(ConfigHeader));
+    // memcpy(&compressed->data[0], &compressionConfig, sizeof(ConfigHeader));
 
     // Add compressed binary data to messages
     compressed->data.insert(compressed->data.end(), compressedImage.begin(), compressedImage.end());
